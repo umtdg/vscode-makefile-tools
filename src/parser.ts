@@ -1234,6 +1234,7 @@ export async function parseCustomConfigProvider(
           compilerTool.arguments,
           "D"
         );
+        defines = defines.map((v) => v.replace(/\\"/g, '"'));
 
         // Parse the IntelliSense mode
         // how to deal with aliases and symlinks (CC, C++), which can point to any toolsets
